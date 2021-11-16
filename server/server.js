@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+const blogRoutes = require('./routes/blogRoutes')
 
 const server = express();
 const port = process.env.PORT ? process.env.PORT : 3000;
@@ -14,6 +15,11 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.log(err));
 
 server.get('/', (req, res) => {
-    res.end('----- SERVER CHECK -----' );
+  res.end('----- SERVER CHECK -----' );
 });
 
+server.use('/blogs', blogRoutes);
+
+server.use((req, res) => {
+  res.end('err 404 page not found' );
+});
