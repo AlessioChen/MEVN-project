@@ -7,6 +7,9 @@ const server = express();
 const port = process.env.PORT ? process.env.PORT : 3000;
 const dbURI = process.env.DB_URI;
 
+server.use(express.json())
+server.use(express.urlencoded({extended: true}));
+
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(res => {
     server.listen(port);
