@@ -107,7 +107,7 @@ Ritorna il blog inserito. Id e date (creazione e aggiornamento) vengono creati a
 ```
 {
     "title": "Secondo Blog aggiornato",
-    "content": " Un altro bellissimo blog aggiornato"
+    "content": "Un altro bellissimo blog aggiornato"
 }
 ```
 
