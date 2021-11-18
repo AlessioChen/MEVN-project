@@ -33,7 +33,7 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
-Ritorna tutti i blog.
+Ritorna un array con tutti i blog.
 
 <br><br>
 
