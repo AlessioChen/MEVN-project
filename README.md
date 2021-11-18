@@ -33,7 +33,8 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
-Ritorna un array con tutti i blog.
+
+Ritorna un array con tutti i blog in ordine di pubblicazione.
 
 <br><br>
 
@@ -58,6 +59,7 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
+
 Ritorna il blog richiesto tramite id.
 
 <br><br>
@@ -92,7 +94,8 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
-Ritorna il blog inserito. Id e date (creazione e aggiornamento) vengono creati automaticamente.
+
+Ritorna il blog inserito. I parametri da inserire nel *body* della *request* sono (per adesso) solo *title* e *content*, id e date (creazione e aggiornamento) vengono inseriti automaticamente.
 
 <br><br>
 
@@ -126,6 +129,7 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
+
 Ritorna il blog aggiornato. La data di aggiornamento viene modificata automaticamente.
 
 
@@ -138,6 +142,7 @@ Ritorna il blog aggiornato. La data di aggiornamento viene modificata automatica
 ```
 
 ##### Success - 200
+
 ```
 HTTP/1.1 200 OK
 {
@@ -151,4 +156,5 @@ HTTP/1.1 200 OK
 ```
 
 ##### Note:
+
 Ritorna il blog eliminato.
