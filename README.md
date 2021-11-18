@@ -70,7 +70,7 @@ Ritorna il blog richiesto tramite id.
 /blogs/singleBlog
 ```
 
-##### request.body
+##### req.body
 
 ```
 {
@@ -105,7 +105,7 @@ Ritorna il blog inserito. I parametri da inserire nel *body* della *request* son
 /blogs/singleBlog/:id
 ```
 
-##### request.body
+##### req.body
 
 ```
 {
