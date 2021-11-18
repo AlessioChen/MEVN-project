@@ -5,7 +5,7 @@ const all_blogs_GET = async (req, res) => {
     try {
         blogs = await Blog.find().sort({ createdAt: -1 });
         if (!blogs) {
-            return res.status(200).send("No available Blogs");
+            return res.status(400).send({ error: "No available Blogs" });
         }
         res.status(200).send(blogs);
     } catch (err) {
@@ -18,7 +18,7 @@ const single_blog_GET = async (req, res) => {
         const id = req.params.id;
         const valid = mongoose.Types.ObjectId.isValid(id);
         if (!valid) {
-            return res.status(400).send({error: 'Not a valid ID'});
+            return res.status(400).send({error: "Not a valid ID"});
         }
         const blog = await Blog.findById(id);
         if (!blog) {
@@ -26,7 +26,7 @@ const single_blog_GET = async (req, res) => {
         }
         res.status(200).send(blog);
     } catch (error) {
-        res.status(400).send("zio fa")
+        res.status(400).send(error)
     }
 }
 
