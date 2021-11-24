@@ -1,9 +1,7 @@
 <template>
-  <nuxt-container>
-    MENUBAR
-    <a href="/">Home</a>|
-    <a href="/posts">Posts</a> |
-    <a href="/about">About</a>
+  <div>
+    <Header @sidenavToggle="sidenav = !sidenav"></Header>
+    <SideNav :show="sidenav" @close="sidenav = false"></SideNav>
 
     <div class="w-full m-0 p-0 bg-cover header-site">
       <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal"></div>
@@ -11,9 +9,23 @@
     <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-24">
       <nuxt />
     </div>
-  </nuxt-container>
+  </div>
 </template>
 
+<script>
+import Header from '@/components/navigator/Header.vue';
+import SideNav from '@/components/navigator/Sidenav.vue';
+
+export default {
+  components: { Header, SideNav },
+  data() {
+    return {
+      sidenav: false
+    }
+  }
+}
+
+</script>
 <style>
 html {
   font-family: "Roboto Condensed", sans-serif;
