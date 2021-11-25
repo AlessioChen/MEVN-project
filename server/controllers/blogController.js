@@ -3,11 +3,12 @@ const mongoose = require("mongoose");
 
 const GETallPosts = async (req, res) => {
     try {
-        posts = await Post.find().sort({ createdAt: -1 });
+        const posts = await Post.find().sort({ createdAt: -1 });
         if (!posts) {
             return res.status(400).send({ error: "No available Blogs" });
+        } else {
+            res.status(200).send(posts);
         }
-        res.status(200).send(posts);
     } catch (err) {
         res.status(400).send(error);
     }
@@ -16,13 +17,13 @@ const GETallPosts = async (req, res) => {
 const GETsinglePost = async (req, res) => {
     try {
         const id = req.params.id;
-        const valid = mongoose.Types.ObjectId.isValid(id);
-        if (!valid) {
-            return res.status(400).send({error: "Not a valid ID"});
+        const isValidId = mongoose.Types.ObjectId.isValid(id);
+        if (!isValidId) {
+            return res.status(400).send({ error: "Not a valid ID" });
         }
         const blog = await Post.findById(id);
         if (!blog) {
-            return res.status(400).send({error: "Blog not found"});
+            return res.status(400).send({ error: "Blog not found" });
         }
         res.status(200).send(blog);
     } catch (error) {
@@ -42,8 +43,8 @@ const POSTsinglePost = async (req, res) => {
 
 const PUTsinglePost = async (req, res) => {
     try {
-        const id = req.params.id;
-        updatedPost = await Post.findByIdAndUpdate(id, req.body, { new: true });
+        const [ id, body ] = [ req.params.id, req.body ];
+        updatedPost = await Post.findByIdAndUpdate(id, body, { new: true });
         res.status(201).send(updatedPost);
     } catch (error) {
         res.status(400).send(error);
