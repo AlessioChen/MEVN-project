@@ -5,6 +5,7 @@
             <PostPreview :id="post.id" :title="post.title" :description="post.description" :thumbnail="post.thumbnail" :userImg="post.userImg" :timeToread="post.timeToread" :tail="post.tail"></PostPreview>
         </div>
     </div>
+   
 </template>
 
 <script>
