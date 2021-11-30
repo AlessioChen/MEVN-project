@@ -3,32 +3,17 @@
         <div v-if="show" class="sidenav-backdrop" @click="$emit('close')"></div>
         <transition name="slide-side">
             <div v-if="show" class="sidenav">
-                <NavList  @click="$emit('close')" margin="20px 0" fontSize="1.5rem" ></NavList>
-                <!-- <ul class="nav-list" @click="$emit('close')"></ul>
-                    <li class="nav-item">
-                        <nuxt-link to="/posts">Blog</nuxt-link>
-                    </li>
-                    <li class="nav-item">
-                        <nuxt-link to="/about">About</nuxt-link>
-                    </li>
-                    <li class="nav-item">
-                        <nuxt-link to="/admin">Admin</nuxt-link>
-                    </li>
-                </ul> -->
+                <TheNavList @click="$emit('close')" margin="20px 0" fontSize="1.5rem"></TheNavList>
             </div>
         </transition>
     </div>
 </template>
 
-<script>
-import NavList from "./NavList.vue";
-export default {
-    name: "Sidenav",
-    props: ['show'],
-    components: {
-        NavList
-    }
-};
+<script setup>
+import TheNavList from "./TheNavList.vue";
+
+const props = defineProps(['show']);
+
 </script>
 
 <style scoped>

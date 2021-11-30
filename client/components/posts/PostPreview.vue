@@ -17,21 +17,10 @@
     </div>
 </template>
 
-<script>
-export default {
-    name: "PostPreview",
-    props: ["id", "title", "description", "thumbnail", "userImg", "timeToRead", "tail"],
-    setup() {
+<script setup>
+const props = defineProps(["id", "title", "description", "thumbnail", "userImg", "timeToRead", "tail"]);
+const thumbnailFormat = (tail) => {
+    return tail === '1/3' ? 'h-64' : 'h-full';
+}
 
-
-        const thumbnailFormat = (tail) => {
-            return tail === '1/3' ? 'h-64' : 'h-full';
-        }
-
-        return { thumbnailFormat }
-    }
-
-};
 </script>
-
-<style></style>

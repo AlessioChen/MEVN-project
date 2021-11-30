@@ -5,13 +5,9 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import PostList from "~~/components/posts/PostList.vue";
-export default {
-  components: {
-    PostList
-  },
-};
+
 </script>
 
 <style></style>

@@ -12,10 +12,8 @@
     </ul>
 </template>
 
-<script>
-export default {
-    props: ['display', 'margin', 'fontSize']
-}
+<script setup>
+const props = defineProps(['display', 'margin', 'fontSize']);
 </script>
 <style scoped>
 .nav-list {

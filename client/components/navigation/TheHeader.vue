@@ -1,28 +1,21 @@
 <template>
     <div class="header-container">
         <header class="the-header">
-            <SideNavBtn @toggle="$emit('sidenavToggle')" />
+            <TheSideNavBtn @toggle="$emit('sidenavToggle')" />
             <div class="logo">
                 <nuxt-link to="/">HOME PAGE</nuxt-link>
             </div>
             <div class="spacer"></div>
             <div class="navigation-items">
-                <navList display="flex" margin="0 10px" />
+                <TheNavList display="flex" margin="0 10px" />
             </div>
         </header>
     </div>
 </template>
 
-<script>
-import NavList from "./NavList.vue"
-import SideNavBtn from "./SideNavBtn.vue"
-export default {
-    name: "Header",
-    components: {
-        NavList,
-        SideNavBtn
-    }
-}
+<script setup>
+import TheNavList from "./TheNavList.vue"
+import TheSideNavBtn from "./TheSideNavBtn.vue"
 </script>
 
 <style scoped>

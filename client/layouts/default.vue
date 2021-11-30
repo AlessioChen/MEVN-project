@@ -1,7 +1,7 @@
 <template>
     <div>
-        <Header @sidenavToggle="sidenav = !sidenav"></Header>
-        <SideNav :show="sidenav" @close="sidenav = false"></SideNav>
+        <TheHeader @sidenavToggle="sidenav = !sidenav"></TheHeader>
+        <TheSideNav :show="sidenav" @close="sidenav = false"></TheSideNav>
         <div class="w-full m-0 p-0 bg-cover bg-bottom header-site">
             <div class="container max-w-4l mx-auto pt-16 md:pt-32 text-center break-normal"></div>
         </div>
@@ -12,25 +12,14 @@
     </div>
 </template>
 
+<script setup>
+import TheHeader from "~~/components/navigation/TheHeader.vue";
+import TheSideNav from "~~/components/navigation/TheSideNav.vue";
 
-<script>
-
-import Header from "~~/components/navigation/Header.vue";
-import SideNav from "~~/components/navigation/SideNav.vue";
-import { ref } from "@vue/reactivity"
-
-export default {
-    components: {
-        Header,
-        SideNav
-    },
-    setup() {
-        let sidenav = ref(false);
-
-        return { sidenav }
-    }
-}
+import { ref } from "vue";
+const sidenav = ref(false);
 </script>
+
 <style>
 html {
     font-family: "Roboto Condensed", sans-serif;
