@@ -2,10 +2,11 @@
     <!-- Post Container -->
     <div class="flex flex-wrap justify-between pt-12 -mx-6">
         <div v-for="(post, index) in posts" :key="`post ${index}`" :class="`w-full md:w-${post.tail} p-6 flex flex-col flex-grow flex-shrink`">
+            {{ post.tail }}
             <PostPreview :id="post.id" :title="post.title" :description="post.description" :thumbnail="post.thumbnail" :userImg="post.userImg" :timeToread="post.timeToread" :tail="post.tail"></PostPreview>
         </div>
     </div>
-   
+    
 </template>
 
 <script>

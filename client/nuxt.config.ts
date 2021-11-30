@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from "nuxt3";
 
 export default defineNuxtConfig({
+
   head: {
     title: "blog",
     htmlAttrs: {
@@ -16,7 +17,8 @@ export default defineNuxtConfig({
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap' }
     ]
   },
-  css: ["~/assets/css/tailwind.css"],
+  //https://github.com/nuxt-community/tailwindcss-module/issues/387
+  // css: ["~/assets/css/tailwind.css"],
   build: {
     postcss: {
       postcssOptions: {
