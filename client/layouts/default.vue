@@ -2,11 +2,11 @@
     <div>
         <Header @sidenavToggle="sidenav = !sidenav"></Header>
         <SideNav :show="sidenav" @close="sidenav = false"></SideNav>
-        <div class="w-full m-0 p-0 bg-cover header-site bg-yellow-200">
-            <div class="container max-w-4l mx-auto pt-16 md:pt-32 text-center break-normal">Ciao sono l'Header</div>
+        <div class="w-full m-0 p-0 bg-cover bg-bottom header-site">
+            <div class="container max-w-4l mx-auto pt-16 md:pt-32 text-center break-normal"></div>
         </div>
 
-        <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+        <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-24">
             <slot />
         </div>
     </div>
