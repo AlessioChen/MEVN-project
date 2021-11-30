@@ -1,5 +1,5 @@
 <template>
     <div>
-        cia
+        ciao sono la home page
     </div>
 </template>
