@@ -3,14 +3,14 @@
         <div v-if="show" class="sidenav-backdrop" @click="$emit('close')"></div>
         <transition name="slide-side">
             <div v-if="show" class="sidenav">
-                <TheNavList @click="$emit('close')" margin="20px 0" fontSize="1.5rem"></TheNavList>
+                <NavList @click="$emit('close')" margin="20px 0" fontSize="1.5rem" />
             </div>
         </transition>
     </div>
 </template>
 
 <script setup>
-import TheNavList from "./TheNavList.vue";
+import NavList from "./NavList.vue";
 
 const props = defineProps(['show']);
 

@@ -7,14 +7,14 @@
             </div>
             <div class="spacer"></div>
             <div class="navigation-items">
-                <TheNavList display="flex" margin="0 10px" />
+                <NavList display="flex" margin="0 10px" />
             </div>
         </header>
     </div>
 </template>
 
 <script setup>
-import TheNavList from "./TheNavList.vue"
+import NavList from "./NavList.vue"
 import TheSideNavBtn from "./TheSideNavBtn.vue"
 </script>
 

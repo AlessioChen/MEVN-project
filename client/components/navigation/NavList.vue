@@ -1,20 +1,16 @@
 <template>
     <ul class="nav-list" :style="{ display: display, 'font-size': fontSize }">
-        <li :style="{ margin: margin }">
-            <nuxt-link to="/posts">Blog</nuxt-link>
-        </li>
-        <li :style="{ margin: margin }">
-            <nuxt-link to="/about">About</nuxt-link>
-        </li>
-        <li :style="{ margin: margin }">
-            <nuxt-link to="/admin">Admin</nuxt-link>
-        </li>
+        <NavItem :url="`/posts`" name="Blog" :margin="margin" />
+        <NavItem :url="`/about`" name="About" :margin="margin" />
+        <NavItem :url="`/admin`" name="Admin" :margin="margin" />
     </ul>
 </template>
 
 <script setup>
+import NavItem from './NavItem.vue';
 const props = defineProps(['display', 'margin', 'fontSize']);
 </script>
+
 <style scoped>
 .nav-list {
     list-style: none;
