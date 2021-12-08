@@ -5,7 +5,7 @@
 #### GET - All posts
 
 ```
-/blog/allPosts
+/blog/posts
 ```
 
 ##### Success - 200
@@ -41,7 +41,7 @@ Ritorna un array con tutti i posts in ordine di pubblicazione.
 #### GET - Single post
 
 ```
-/blog/singlePost/:id
+/blog/post/:id
 ```
 
 ##### Success - 200
@@ -67,7 +67,7 @@ Ritorna il post richiesto tramite id.
 #### POST - Single post
 
 ```
-/blog/singlePost
+/blog/post
 ```
 
 ##### req.body
@@ -102,7 +102,7 @@ Ritorna il post inserito. I parametri da inserire nel *body* della *req* sono (p
 #### PUT - Single post
 
 ```
-/blog/singlePost/:id
+/blog/post/:id
 ```
 
 ##### req.body
@@ -138,7 +138,7 @@ Ritorna il post aggiornato. La data di aggiornamento viene modificata automatica
 #### DELETE - Single post
 
 ```
-/blogs/singlePost/:id
+/blogs/post/:id
 ```
 
 ##### Success - 200
