@@ -9,11 +9,16 @@ const blogSchema = new Schema({
     content: {
         type: String,
         required: true
-    }, 
+    },
     image: {
         data: Buffer,
         contentType: String
-    },
+    }, thumbnail: {
+        type: String
+    }, timeToRead: {
+        type: Number,
+        required: true
+    }
 }, { timestamps: true });
 
 const Post = mongoose.model('Post', blogSchema);
