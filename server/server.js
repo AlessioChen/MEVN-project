@@ -12,7 +12,7 @@ server.listen(port || 3000);
 
 // ----- Connection to DB -----
 dbConnection(dbURI)
-  .then(() => console.log('Connected to MongoDB successfully'))
+  .then(() => console.log('Connected to MongoDB successfully on port: ' + port))
   .catch(error => console.log('Connection to MongoDB failed. Error: ' + error));
 
 // ----- Middlewares -----

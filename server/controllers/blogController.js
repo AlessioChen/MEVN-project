@@ -38,6 +38,7 @@ const POSTsinglePost = async (req, res) => {
         res.status(200).send(post);
     } catch (error) {
         res.status(400).send(error);
+        console.log(req.body)
     }
 };
 
