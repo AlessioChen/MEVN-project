@@ -2,10 +2,10 @@
 
 ## ENDPOINTS
 
-#### GET - All blogs
+#### GET - All posts
 
 ```
-/blogs/allBlogs
+/blog/posts
 ```
 
 ##### Success - 200
@@ -15,8 +15,8 @@ HTTP/1.1 200 OK
 [
     {
         "_id": "6195aaec3911af0313ee6482",
-        "title": "Primo Blog",
-        "content": "Un bellissimo blog",
+        "title": "Primo Post",
+        "content": "Un bellissimo post",
         "createdAt": "2021-11-18T01:22:52.892Z",
         "updatedAt": "2021-11-18T01:22:52.892Z",
         "__v": 0
@@ -34,14 +34,14 @@ HTTP/1.1 200 OK
 
 ##### Note:
 
-Ritorna un array con tutti i blog in ordine di pubblicazione.
+Ritorna un array con tutti i posts in ordine di pubblicazione.
 
 ---
 
-#### GET - Single blog
+#### GET - Single post
 
 ```
-/blogs/singleBlog/:id
+/blog/post/:id
 ```
 
 ##### Success - 200
@@ -50,8 +50,8 @@ Ritorna un array con tutti i blog in ordine di pubblicazione.
 HTTP/1.1 200 OK
 {
     "_id": "6195aaec3911af0313ee6482",
-    "title": "Primo Blog",
-    "content": "Un bellissimo blog",
+    "title": "Primo Post",
+    "content": "Un bellissimo post",
     "createdAt": "2021-11-18T01:22:52.892Z",
     "updatedAt": "2021-11-18T01:22:52.892Z",
     "__v": 0
@@ -60,22 +60,22 @@ HTTP/1.1 200 OK
 
 ##### Note:
 
-Ritorna il blog richiesto tramite id.
+Ritorna il post richiesto tramite id.
 
 ---
 
-#### POST - Single blog
+#### POST - Single post
 
 ```
-/blogs/singleBlog
+/blog/post
 ```
 
 ##### req.body
 
 ```
 {
-    "title": "Secondo Blog",
-    "content": "Un altro bellissimo blog"
+    "title": "Secondo Post",
+    "content": "Un altro bellissimo post"
 }
 ```
 
@@ -84,8 +84,8 @@ Ritorna il blog richiesto tramite id.
 ```
 HTTP/1.1 200 OK
 {
-    "title": "Secondo Blog",
-    "content": "Un altro bellissimo blog",
+    "title": "Secondo Post",
+    "content": "Un altro bellissimo post",
     "_id": "6195af40a1c0f41c815b5b66",
     "createdAt": "2021-11-18T01:41:20.143Z",
     "updatedAt": "2021-11-18T01:41:20.143Z",
@@ -95,22 +95,22 @@ HTTP/1.1 200 OK
 
 ##### Note:
 
-Ritorna il blog inserito. I parametri da inserire nel *body* della *req* sono (per adesso) solo *title* e *content*, *id* e date (creazione e aggiornamento) vengono inseriti automaticamente.
+Ritorna il post inserito. I parametri da inserire nel *body* della *req* sono (per adesso) solo *title* e *content*, *id* e date (creazione e aggiornamento) vengono inseriti automaticamente.
 
 ---
 
-#### PUT - Single blog
+#### PUT - Single post
 
 ```
-/blogs/singleBlog/:id
+/blog/post/:id
 ```
 
 ##### req.body
 
 ```
 {
-    "title": "Secondo Blog aggiornato",
-    "content": "Un altro bellissimo blog aggiornato"
+    "title": "Secondo Post aggiornato",
+    "content": "Un altro bellissimo post aggiornato"
 }
 ```
 
@@ -120,8 +120,8 @@ Ritorna il blog inserito. I parametri da inserire nel *body* della *req* sono (p
 HTTP/1.1 200 OK
 {
     "_id": "6195af40a1c0f41c815b5b66",
-    "title": "Secondo Blog aggiornato",
-    "content": "Un altro bellissimo blog aggiornato",
+    "title": "Secondo Post aggiornato",
+    "content": "Un altro bellissimo post aggiornato",
     "createdAt": "2021-11-18T01:41:20.143Z",
     "updatedAt": "2021-11-18T01:46:11.068Z",
     "__v": 0
@@ -130,15 +130,15 @@ HTTP/1.1 200 OK
 
 ##### Note:
 
-Ritorna il blog aggiornato. La data di aggiornamento viene modificata automaticamente.
+Ritorna il post aggiornato. La data di aggiornamento viene modificata automaticamente.
 
 
 ---
 
-#### DELETE - Single blog
+#### DELETE - Single post
 
 ```
-/blogs/singleBlog/:id
+/blogs/post/:id
 ```
 
 ##### Success - 200
@@ -147,8 +147,8 @@ Ritorna il blog aggiornato. La data di aggiornamento viene modificata automatica
 HTTP/1.1 200 OK
 {
     "_id": "6195af40a1c0f41c815b5b66",
-    "title": "Secondo Blog aggiornato",
-    "content": "Un altro bellissimo blog aggiornato",
+    "title": "Secondo Post aggiornato",
+    "content": "Un altro bellissimo post aggiornato",
     "createdAt": "2021-11-18T01:41:20.143Z",
     "updatedAt": "2021-11-18T01:46:11.068Z",
     "__v": 0
@@ -157,4 +157,4 @@ HTTP/1.1 200 OK
 
 ##### Note:
 
-Ritorna il blog eliminato.
+Ritorna il post eliminato.
