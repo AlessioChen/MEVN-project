@@ -6,13 +6,12 @@ const blogSchema = new Schema({
         type: String,
         required: true
     },
+    tail: {
+        type: Number
+    },
     content: {
         type: String,
         required: true
-    },
-    image: {
-        data: Buffer,
-        contentType: String
     }, thumbnail: {
         type: String
     }, timeToRead: {
