@@ -17,6 +17,7 @@
 
 <script setup>
 import { onMounted, reactive, ref } from "vue";
+import axios from 'axios'; 
 import PostPreview from "./PostPreview.vue";
 const props = defineProps(['type']);
 const allPosts = ref([
@@ -44,6 +45,10 @@ onMounted(() => {
         posts.value = lastPosts.value;
     }
 })
+
+let url = 'https://menvproject.herokuapp.com/blog/posts'; 
+const {data} = await axios.get(url); 
+console.log(data); 
 
 
 </script>
