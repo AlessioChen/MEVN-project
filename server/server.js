@@ -1,9 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
+const cors = require('cors'); 
 const blogRoutes = require('./routes/blogRoutes');
 const dbConnection = require('./helpers/dbConnection');
 
+
 const server = express();
+server.use(cors()); 
 const port = process.env.PORT;
 const dbURI = process.env.DB_URI;
 
