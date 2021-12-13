@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="text-white font-extrabold text-3xl md:text-5xl">Posts</p>
-    <PostList type="all" />
+    <PostList />
   </div>
 </template>
 
