@@ -32,7 +32,7 @@ const GETsinglePost = async (req, res) => {
 }
 
 const POSTsinglePost = async (req, res) => {
-    try { 
+    try {
         const post = new Post(req.body);
         await post.save()
         res.status(200).send(post);
@@ -44,7 +44,7 @@ const POSTsinglePost = async (req, res) => {
 
 const PUTsinglePost = async (req, res) => {
     try {
-        const [ id, body ] = [ req.params.id, req.body ];
+        const [id, body] = [req.params.id, req.body];
         updatedPost = await Post.findByIdAndUpdate(id, body, { new: true });
         res.status(201).send(updatedPost);
     } catch (error) {
@@ -62,7 +62,7 @@ const DELETEsinglePost = async (req, res) => {
     }
 };
 
-module.exports = { 
+module.exports = {
     GETallPosts,
     GETsinglePost,
     POSTsinglePost,
