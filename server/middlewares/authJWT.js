@@ -3,7 +3,7 @@ const { user } = require('../models');
 const db = require('../models');
 const User = db.user;
 const Role = db.role;
-const secret = process.env.PORT;
+const secret = process.env.SECRET;
 
 verifyToken = (req, res, next) => {
     let token = req.headers["x-access-token"];
