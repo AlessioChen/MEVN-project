@@ -6,7 +6,12 @@ const dbConnection = require('./helpers/dbConnection');
 
 
 const server = express();
-server.use(cors()); 
+
+const corsOptions = {
+  origin: "http://localhost:5000"
+};
+
+
 const port = process.env.PORT;
 const dbURI = process.env.DB_URI;
 
@@ -21,6 +26,7 @@ dbConnection(dbURI)
 // ----- Middlewares -----
 server.use(express.json())
 server.use(express.urlencoded({extended: true}));
+server.use(cors(corsOptions)); 
 
 // ----- Routes -----
 server.get('/', (req, res) => res.end('----- SERVER CHECK -----' ));
