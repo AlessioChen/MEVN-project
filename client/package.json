@@ -12,6 +12,10 @@
     "tailwindcss": "^2.2.19"
   },
   "dependencies": {
-    "axios": "^0.24.0"
+    "@pinia/nuxt": "^0.1.8",
+    "@vueuse/core": "^7.5.3",
+    "axios": "^0.24.0",
+    "lockr": "^0.8.5",
+    "pinia": "^2.0.9"
   }
 }
